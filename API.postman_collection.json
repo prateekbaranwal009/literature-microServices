@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "4584e223-7c2c-49d6-a219-5a0bb718d7e2",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27466617"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{3000}}/v1/user/create",
+					"host": [
+						"{{3000}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Pra\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{3000}}/v1/user/update/6532c79529ccb0d50e58170d",
+					"host": [
+						"{{3000}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"update",
+						"6532c79529ccb0d50e58170d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{3000}}/v1/user/delete/6532c79529ccb0d50e58170d",
+					"host": [
+						"{{3000}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"delete",
+						"6532c79529ccb0d50e58170d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{3000}}/v1/user/get?userId=6532c8f29b8068cf734cb131",
+					"host": [
+						"{{3000}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"get"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "6532c8f29b8068cf734cb131"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload content",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/fantiger/Downloads/content - Sheet2.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{3001}}/v1/content/upload",
+					"host": [
+						"{{3001}}"
+					],
+					"path": [
+						"v1",
+						"content",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update content",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"story\": \"test content 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{3001}}/v1/content/update/653420de5f75cdb08b419718",
+					"host": [
+						"{{3001}}"
+					],
+					"path": [
+						"v1",
+						"content",
+						"update",
+						"653420de5f75cdb08b419718"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete content",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{3001}}/v1/content/delete/653420de5f75cdb08b419718",
+					"host": [
+						"{{3001}}"
+					],
+					"path": [
+						"v1",
+						"content",
+						"delete",
+						"653420de5f75cdb08b419718"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create content",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"title 2\",\n    \"story\": \"story 2\",\n    \"date_published\": \"2023-10-11 12:00\",\n    \"userId\": \"5f647a1c8d2fdd1dd1cded5b\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{3001}}/v1/content/create",
+					"host": [
+						"{{3001}}"
+					],
+					"path": [
+						"v1",
+						"content",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get content",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{3001}}/v1/content/get?type=single&contentId=6534b9133a6d3e24c083f5ed",
+					"host": [
+						"{{3001}}"
+					],
+					"path": [
+						"v1",
+						"content",
+						"get"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "single"
+						},
+						{
+							"key": "contentId",
+							"value": "6534b9133a6d3e24c083f5ed"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTopContent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{3002}}/v1/getTopContent",
+					"host": [
+						"{{3002}}"
+					],
+					"path": [
+						"v1",
+						"getTopContent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "content event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"6532c8f29b8068cf734cb130\",\n    \"like\": 1,\n    \"read\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{3002}}/v1/event/653420de5f75cdb08b41971b",
+					"host": [
+						"{{3002}}"
+					],
+					"path": [
+						"v1",
+						"event",
+						"653420de5f75cdb08b41971b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
